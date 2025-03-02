@@ -50,7 +50,6 @@ const ContactForm = () => {
 
     try {
       const recaptchaToken = await executeRecaptcha("contact_form");
-      console.log(recaptchaToken);
       const response = await fetch(`/api/sendmail`, {
         method: "POST",
         body: JSON.stringify({
